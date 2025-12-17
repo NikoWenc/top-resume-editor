@@ -8,7 +8,7 @@ function App() {
         <div className="border-b-2 border-gray-400">
           <Header />
         </div>
-        <div className="border-b-2 border-gray-400">
+        <div>
           <Middle />
         </div>
       </main>

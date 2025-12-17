@@ -1,4 +1,4 @@
-export default function AboutMe({ aboutText, handleClickedToEdit }) {
+export default function AboutMeFinal({ aboutText, handleClickedToEdit }) {
   return (
     <>
       <button

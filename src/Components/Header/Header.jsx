@@ -1,6 +1,6 @@
 import { useState } from "react";
-import HeaderFinal from "./HeaderFinal";
-import HeaderEdit from "./HeaderEdit";
+import HeaderFinal from "./States/HeaderFinal";
+import HeaderEdit from "./States/HeaderEdit";
 
 export default function Header() {
   const [person, setPerson] = useState({
@@ -26,23 +26,23 @@ export default function Header() {
     });
   }
 
-  if (person.infoIsFilled) {
-    return (
-      <HeaderEdit
-        handleInputs={handleInputs}
-        handleClickedToEdit={handleClickedToEdit}
-      />
-    );
-  } else {
-    return (
-      <HeaderFinal
-        name={person.name}
-        phoneNumber={person.phoneNumber}
-        email={person.email}
-        github={person.github}
-        linkedIn={person.linkedIn}
-        handleClickedToEdit={handleClickedToEdit}
-      />
-    );
-  }
+  return (
+    <>
+      {person.infoIsFilled ? (
+        <HeaderEdit
+          handleInputs={handleInputs}
+          handleClickedToEdit={handleClickedToEdit}
+        />
+      ) : (
+        <HeaderFinal
+          name={person.name}
+          phoneNumber={person.phoneNumber}
+          email={person.email}
+          github={person.github}
+          linkedIn={person.linkedIn}
+          handleClickedToEdit={handleClickedToEdit}
+        />
+      )}
+    </>
+  );
 }
