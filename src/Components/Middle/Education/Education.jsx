@@ -2,7 +2,7 @@ import { useState } from "react";
 import EducationFinal from "./States/EducationFinal";
 import EducationEdit from "./States/EducationEdit";
 
-export default function Education() {
+export default function Education({ handleClickedToRemove, id }) {
   const [schools, setSchools] = useState({
     schoolName: "School Name",
     program: "Program",
@@ -26,8 +26,7 @@ export default function Education() {
   }
 
   return (
-    <div className="group relative border-b-2 border-gray-400 pb-3">
-      <h1 className="pt-3 text-2xl">Education</h1>
+    <div className="group relative pb-3">
       {schools.educationState ? (
         <EducationEdit
           handleInputs={handleInputs}
@@ -40,6 +39,8 @@ export default function Education() {
           schoolYear={schools.schoolYear}
           learned={schools.learned}
           handleClickedToEdit={handleClickedToEdit}
+          handleClickedToRemove={handleClickedToRemove}
+          id={id}
         />
       )}
     </div>

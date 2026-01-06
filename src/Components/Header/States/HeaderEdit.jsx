@@ -29,7 +29,9 @@ export default function HeaderEdit({ handleInputs, handleClickedToEdit }) {
       </label>
       <section className="flex w-full flex-1 content-center justify-around pt-8">
         <label htmlFor="phoneNumber">
-          <FontAwesomeIcon icon="fa-solid fa-phone" />
+          <span>
+            <FontAwesomeIcon icon="fa-solid fa-phone" />
+          </span>
           <input
             name="phoneNumber"
             id="phoneNumber"
@@ -40,6 +42,9 @@ export default function HeaderEdit({ handleInputs, handleClickedToEdit }) {
           />
         </label>
         <label htmlFor="email">
+          <span>
+            <FontAwesomeIcon icon="fa-solid fa-envelope" />
+          </span>
           <input
             name="email"
             id="email"
@@ -50,6 +55,9 @@ export default function HeaderEdit({ handleInputs, handleClickedToEdit }) {
           />
         </label>
         <label htmlFor="github">
+          <span>
+            <FontAwesomeIcon icon="fa-brands fa-github" />
+          </span>
           <input
             name="github"
             id="github"
@@ -60,6 +68,9 @@ export default function HeaderEdit({ handleInputs, handleClickedToEdit }) {
           />
         </label>
         <label htmlFor="linkedIn">
+          <span>
+            <FontAwesomeIcon icon="fa-brands fa-linkedin" />
+          </span>
           <input
             name="linkedIn"
             id="linkedIn"
